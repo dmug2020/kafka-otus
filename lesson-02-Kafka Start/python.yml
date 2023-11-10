@@ -1,0 +1,27 @@
+
+version: "3"
+
+services:
+
+   pythton:
+     container_name: python
+     image: alpine:python 
+     tty: true
+     command: sh
+     restart: always
+     volumes:
+       - /root/kafka/python:/root
+
+     networks:
+      - "kafka"
+   
+   
+
+
+
+
+
+
+networks:
+  kafka:
+    external: true

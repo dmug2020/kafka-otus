@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+
+
+   clickhouse:
+     container_name: clickhouse
+     image: yandex/clickhouse-server:20.3
+     volumes:
+       - /var/lib/clickhouse:/var/lib/clickhouse
+       - /root/kafka/clickhouse/users.d:/etc/clickhouse-server/users.d/
+       - /root/kafka/clickhouse/config.xml:/etc/clickhouse-server/config.xml  
+     restart: always
+     ulimits:
+       nofile:
+         soft: 262144
+         hard: 262144
+
+     networks:
+      - "kafka"
+   
+   
+
+
+
+
+
+
+networks:
+  kafka:
+    external: true
