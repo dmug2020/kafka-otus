@@ -8,3 +8,6 @@ lesson 2
 - python.yml - сервис с питоном внутри ( продюсер и консьюмер на питоне)
 - ksqldb.yml - сервис ksql
 - https://github.com/dmug2020/kafka-otus/blob/main/lesson-02-Kafka%20Start/kafka-lesson2.png скрин работы скриптов
+
+
+add change 1
